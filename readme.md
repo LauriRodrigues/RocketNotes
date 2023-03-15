@@ -24,6 +24,7 @@
   <img alt="Logo NodeJS" src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
   <img alt="Logo Express" src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
   <img alt="Logo SQLite" src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white">
+  <img alt="Logo KNEX" src="https://img.shields.io/badge/Knex-orange?style=for-the-badge">
   
 </div>
 
