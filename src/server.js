@@ -1,3 +1,4 @@
+import dotenv from 'dotenv'
 import express from "express"
 import 'express-async-errors'
 import migrationsRun from "./database/sqlite/migrations/index.js"
@@ -5,6 +6,8 @@ import { routes } from "./routes/index.js"
 import { AppError } from "./utils/AppError.js"
 import uploadConfig from './configs/upload.js'
 import cors from 'cors'
+
+dotenv.config()
 
 const app = express()
 
@@ -34,5 +37,5 @@ app.use(( error, request, response, next) => {
   })
 })
 
-const PORT = 3333
+const PORT = process.env.PORT || 3333
 app.listen(PORT, () => console.log(`Server is running at ${PORT}`))
