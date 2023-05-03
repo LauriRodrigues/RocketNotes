@@ -1,17 +1,20 @@
 import express from "express"
 import 'express-async-errors'
-
 import migrationsRun from "./database/sqlite/migrations/index.js"
-
 import { routes } from "./routes/index.js"
-
 import { AppError } from "./utils/AppError.js"
+import uploadConfig from './configs/upload.js'
+import cors from 'cors'
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
 migrationsRun()
+
+app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER))
 
 app.use(routes)
 
