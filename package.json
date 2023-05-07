@@ -7,7 +7,8 @@
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.cjs --env production",
     "dev": "node --watch ./src/server.js",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "test": "vitest --watch"
   },
   "keywords": [],
   "author": "Lauriana Rodrigues Lima",
@@ -27,6 +28,7 @@
     "sqlite3": "^5.1.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "vitest": "^0.31.0"
   }
 }
